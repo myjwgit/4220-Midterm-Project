@@ -1,3 +1,12 @@
+/* install fs-extra
+    npm install fs-extra
+*/
+
+/*
+    install inquirer
+    npm install inquirer
+*/
+
 const fs = require('fs-extra');
 const path = require('path');
 
