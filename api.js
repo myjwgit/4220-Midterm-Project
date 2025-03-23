@@ -1,11 +1,13 @@
 import axios from 'axios';
 
 const BASE_URL = 'https://www.googleapis.com/books/v1/volumes';
+
 export const searchBooks = async (query, maxResults = 10, startIndex = 0) => {
     try {
-       
+        // 🔹 You forgot to make the API request! Add this:
+        const response = await axios.get(`${BASE_URL}?q=${query}&maxResults=${maxResults}&startIndex=${startIndex}`);
 
-        // Formating
+        // Formatting the response
         if (response.data.items) {
             return response.data.items.map(book => ({
                 id: book.id,
@@ -21,13 +23,12 @@ export const searchBooks = async (query, maxResults = 10, startIndex = 0) => {
                 previewLink: book.volumeInfo.previewLink
             }));
         }
-        
+
         return [];
     } catch (error) {
         throw new Error(`Failed to search books: ${error.message}`);
     }
 };
-
 
 export const getBookDetails = async (bookId) => {
     try {
@@ -60,6 +61,5 @@ export const getBookDetails = async (bookId) => {
         throw new Error(`Failed to get book details: ${error.message}`);
     }
 };
-
 
 
