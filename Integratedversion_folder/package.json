@@ -1,0 +1,20 @@
+{
+  "name": "cli-book-search",
+  "version": "1.0.0",
+  "description": "A CLI for searching books using Google Books API",
+  "type": "module",
+  "main": "cli.js",
+  "scripts": {
+    "start": "node cli.js"
+  },
+  
+  "author": "jilei zou, Yongkang Liu, Weihao Liu, Anderson Godo Pena Reyes, Nicholas Martin, Adrian Flores Aquino",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "inquirer": "^9.0.0",
+    "fs-extra": "^11.1.0",
+    "yargs": "^17.7.2"
+    
+  }
+}
